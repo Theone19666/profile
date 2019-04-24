@@ -27,4 +27,22 @@ $(document).ready(function(){
         $('#form_error').toggle();
 		button.prop('disabled', true);
 	});
+    
+    var scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+
+   $('#href_profile').on('click',function(){
+       if(navigator.userAgent.search("MSIE") >= 0 || navigator.userAgent.search("Safari") >= 0 || navigator.userAgent.search("Edge") >= 0){
+           window.scrollTo(0,scrollHeight-$('#form_block').outerHeight());
+       }
+       else{
+            window.scrollTo({
+              top: scrollHeight-$('#form_block').outerHeight(),
+              behavior: 'smooth'
+            });   
+       }
+   }); 
 });

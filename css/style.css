@@ -47,14 +47,22 @@ html {
     background-color: transparent;
     color:  #F47821;
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
     width: 236px;
     margin: 0 auto;
     cursor: pointer;
+-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
 }
-.circle{
+.header .header__profile-href .header__profile-href-circle{
     background-color: #F7F5FA;
     width: 54px;
     height: 54px;
@@ -65,14 +73,11 @@ html {
     line-height: 54px;
     transition: all 0.5s ease-out;
 }
-.icon.arrow{
-   /* width: 14px;
-    height: 14px;
-    line-height: 54px; */
+.header .header__profile-href .header__profile-href-icon{
     position: absolute;
     left: 19px;
 }
-.button-text{
+.header .header__profile-href .header__profile-href-button-text{
     color: #222222;
     font-family: 'Gilroy Regular', sans-serif;
     font-size: 16px;
@@ -81,7 +86,7 @@ html {
     text-transform: uppercase;
     z-index: 999999;
 }
-.header .header__profile-href:hover .circle{
+.header .header__profile-href:hover .header__profile-href-circle{
     width: 100%;
 }
 .weDo{
@@ -105,7 +110,13 @@ html {
     top: 501px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 234px;
+    -ms-flex-wrap: wrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width: 972px;
+    margin-left: 50%;
+    left: -486px;
 }
 .weDo__actions .weDo__actions-action{
     padding: 50px 70px 61px 60px;
@@ -159,7 +170,7 @@ html {
     margin-bottom: 30px;
 }
 .advantages{
-    padding: 120px 166px 160px 135px;
+    padding: 120px 135px 160px; 
     background-color: #F7F5FA;
 }
 .advantages .advantages__caption{
@@ -171,11 +182,17 @@ html {
 }
 .advantages .advantages__list{
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: space-between;
+    -webkit-box-pack: justify;
 }
 .advantages .advantages__list .advantages__list-advantage{
-    width: 345px;
+    width: 326px;
 }
 .advantages .advantages__list .advantages__list-advantage .advantages__list-advantage-caption{
     font-size: 20px;
@@ -251,6 +268,10 @@ html {
     color: #F47821;
     font-weight: bold;
     cursor: pointer;
+    width: 100%;
+}
+.form .form__form .form__button[disabled]{
+    color: #F7F5FA;
 }
 .form .form__form .form__block{
     position: relative;
@@ -301,7 +322,11 @@ html {
     .weDo__actions{
         position: static;
         flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         margin: 0;
+        width: 100%;
     }
     .weDo__actions .weDo__actions-action{
         width: 100%;

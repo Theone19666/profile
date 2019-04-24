@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Тестовое задание</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -12,17 +13,15 @@
         <header class="header">
             <h1 class="header__caption">Ты готов стать профессионалом?</h1>
             <p class="header__text">Мы ищем <span class="header__text-href">талантов</span> и <span class="header__text-href">саппортов</span> в команду. Решите на какую категорию вы претендуете.</p>
-            <!--<a class="header__profile-href">заполнить анкету</a>-->
-            <a class="header__profile-href buttons__button-cover learn-more">
-                <div class="circle">
-                    <span class="icon arrow">&#10010;</span>
+            <a class="header__profile-href" id="href_profile">
+                <div class="header__profile-href-circle">
+                    <span class="header__profile-href-icon">&#10010;</span>
                 </div>
-                <p class="button-text">заполнить анкету</p>
+                <p class="header__profile-href-button-text">заполнить анкету</p>
             </a>
         </header>
         <main>
             <div class="weDo">
-              <!--  <img src="images/people.png" class="weDo__people-image"> -->
                 <div class="weDo__actions">
                     <div class="weDo__actions-action">
                         <h3 class="weDo__actions-action-name">Прокачиваем мир</h3>
@@ -41,7 +40,6 @@
                         <p class="weDo__actions-action-text">Вы не обвиняете других в свои неудачах и способны воспринимать критику?</p>
                     </div>
                 </div>
-            <!--    <div class="weDo__grey"></div> -->
             </div>
             <div class="weSimilar">
                 <h2 class="weSimilar__caption">Мы похожи!</h2>
@@ -51,29 +49,29 @@
                 </div>
             </div>
             <div class="advantages">
-                <h2 class="advantages__caption">Приемущества работы с нами</h2>
+                <h2 class="advantages__caption">Преимущества работы с нами</h2>
                 <div class="advantages__list">
                     <div class="advantages__list-advantage">
-                        <img src="images/wallet.png" class="advantages__list-advantage-img">
+                        <img src="images/wallet.png" class="advantages__list-advantage-img" alt="Кошелёк">
                         <h3 class="advantages__list-advantage-caption">Делимся оптом и навыками</h3>
                         <div class="advantages__list-advantage-underline"></div>
                         <p class="advantages__list-advantage-text">Мы обучаем коллег всему, что знаем сами. Наш опыт уникален и проверен временем, а команда постоянно совершенствует свои знания и навыки.</p>
                     </div>
                     <div class="advantages__list-advantage">
-                        <img src="images/wallet.png" class="advantages__list-advantage-img">
+                        <img src="images/wallet.png" class="advantages__list-advantage-img" alt="Кошелёк">
                         <h3 class="advantages__list-advantage-caption">Стабильная зарплата</h3>
                         <div class="advantages__list-advantage-underline"></div>
                         <p class="advantages__list-advantage-text">Вы без задержек получаете официальную зарплату. Также мы оплачиваем больничные и даем возможность брать оплачиваемый отпуск до 4 недель в год.</p>
                     </div>
                     <div class="advantages__list-advantage">
-                        <img src="images/wallet.png" class="advantages__list-advantage-img">
+                        <img src="images/wallet.png" class="advantages__list-advantage-img" alt="Кошелёк">
                         <h3 class="advantages__list-advantage-caption">Гибкий график</h3>
                         <div class="advantages__list-advantage-underline"></div>
                         <p class="advantages__list-advantage-text">Мы умеем работать с теми, кто еще не закончил получать образование. Вы можете работать неполный рабочий день, брать отгулы на время сессии и диплома.</p>
                     </div>       
                 </div>
             </div>
-            <div class="form">
+            <div class="form" id="form_block">
                 <h2 class="form__caption">Теперь расскажите о себе</h2>
                 <form action="#" id="form" class="form__form">  
                     <div class="form__block">
@@ -95,7 +93,7 @@
                         <span class="form__label-digit">4</span>
                         <label class="form__label">Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?</label>           
                     </div>
-                    <input type="text" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" class="form__input" id="comment"/>
+                    <input type="text" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" class="form__input" id="comment" title="Свой проект по созданию универсальной инфраструктуры строительства"/>
                     <div class="form__error" id="form_error"></div>
                     <button type="submit" class="form__button" id="submit_button" disabled>отправить</button>
                 </form>
