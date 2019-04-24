@@ -19,7 +19,7 @@ html {
 }
 .header{
     text-align: center;
-    padding: 175px 7% 374px;
+    padding: 165px 7% 142px;
 }
 .header .header__caption{
     font-size: 48px;
@@ -44,6 +44,67 @@ html {
     font-size: 16px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    background-color: transparent;
+    color:  #F47821;
+}
+.learn-more{
+    width: 12rem;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    padding: 0;
+    position: relative;
+}
+.learn-more .circle{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    margin: 0;
+    width: 54px;
+    height: 54px;
+    background: #314a5b;
+    border-radius: 1.625rem;
+    font-size: 14px;
+}
+.learn-more .circle .icon{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+.learn-more .circle .icon.arrow{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+.learn-more .circle .icon.arrow:before{
+    position: absolute;
+    content: '+';
+}
+.learn-more .button-text{
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #314a5b;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+.learn-more:hover .circle {
+  width: 100%;
+}
+.learn-more:hover .button-text {
+  color: #fff;
 }
 /*.header .header__profile-href .header__profile-href-X{
     color: #F47821;
@@ -51,7 +112,7 @@ html {
     border-radius: 50%;
     border: 20px solid #F7F5FA;
 }*/
-.header .header__profile-href::before {
+/*.header .header__profile-href::before {
     content: "+";
     border-radius: 50%;
     color: #F47821;
@@ -60,7 +121,7 @@ html {
 }
 .header .header__profile-href:hover::before {
     
-}
+}*/
 /*.weDo{
     display: grid;
     position: relative;
@@ -280,9 +341,9 @@ html {
     .advantages{
         padding: 10%;
     }
-    .header{
+    /*.header{
         padding: 10%;
-    }
+    }*/
     .form .form__form{
         width: 100%;
         padding: 0 10%;
