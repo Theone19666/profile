@@ -46,86 +46,44 @@ html {
     text-transform: uppercase;
     background-color: transparent;
     color:  #F47821;
-}
-.learn-more{
-    width: 12rem;
-    height: auto;
-    display: inline-block;
-    vertical-align: middle;
-    background: transparent;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    width: 255px;
+    margin: 0 auto;
+    cursor: pointer;
 }
-.learn-more .circle{
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    margin: 0;
+.circle{
+    background-color: #F7F5FA;
     width: 54px;
     height: 54px;
-    background: #314a5b;
-    border-radius: 1.625rem;
-    font-size: 14px;
-}
-.learn-more .circle .icon{
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    border-radius: 111px;
+    /* width: 100%; */
     position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: #fff;
-}
-.learn-more .circle .icon.arrow{
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    width: 1.125rem;
-    height: 0.125rem;
-    background: none;
-}
-.learn-more .circle .icon.arrow:before{
-    position: absolute;
-    content: '+';
-}
-.learn-more .button-text{
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: #314a5b;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
+    line-height: 54px;
+    transition: all 0.5s ease-out;
+}
+.icon.arrow{
+   /* width: 14px;
+    height: 14px;
+    line-height: 54px; */
+    position: absolute;
+    left: 19px;
+}
+.button-text{
+    color: #222222;
+    font-family: 'Gilroy Regular', sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
+    z-index: 999999;
 }
-.learn-more:hover .circle {
-  width: 100%;
+.header .header__profile-href:hover .circle{
+    width: 100%;
 }
-.learn-more:hover .button-text {
-  color: #fff;
-}
-/*.header .header__profile-href .header__profile-href-X{
-    color: #F47821;
-    background: #F7F5FA;
-    border-radius: 50%;
-    border: 20px solid #F7F5FA;
-}*/
-/*.header .header__profile-href::before {
-    content: "+";
-    border-radius: 50%;
-    color: #F47821;
-    background-color: #F7F5FA;
-    padding: 20px;
-}
-.header .header__profile-href:hover::before {
-    
-}*/
-/*.weDo{
-    display: grid;
-    position: relative;
-} */
 .weDo{
     background-image: url(../images/people.png);
     height: 1124px;
@@ -190,7 +148,7 @@ html {
     margin-bottom: 24px;
 }
 .weSimilar .weSimilar__text{
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -214,7 +172,7 @@ html {
 .advantages .advantages__list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .advantages .advantages__list .advantages__list-advantage{
     width: 345px;
@@ -232,7 +190,7 @@ html {
     margin-bottom: 27px;
 }
 .advantages .advantages__list .advantages__list-advantage .advantages__list-advantage-text{
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 26px;
     color: #4E4D53;
@@ -271,7 +229,7 @@ html {
     background-color: transparent;
     opacity: 0.3;
     border-bottom: 2px solid rgba(256,256,256,0.3);
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -285,29 +243,44 @@ html {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
     border-radius: 111px;
     padding: 20px 0 16px;
-    font-family: Gilroy;
+    font-family: 'Gilroy Regular';
     font-size: 14px;
     line-height: normal;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #F47821;
     font-weight: bold;
+    cursor: pointer;
+}
+.form .form__form .form__block{
+    position: relative;
 }
 .form .form__form .form__label-digit{
     position: relative;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: normal;
     text-align: center;
     color: #F47821;
-    background: #F7F5FA;
-    border-radius: 50%;
-    border: 20px solid #F7F5FA;
+    position: absolute;
+    left: -79px;
+    top: -21px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 111px;
+    border: 1px solid rgba(256,256,256,0.23);
 }
 .form .form__form .form__input::-webkit-input-placeholder{
     color: white;
+}
+.form .form__form .form__error{
+    margin-bottom: 48px;
+    color: #F47821;
+    text-transform: uppercase;
+    display: none;
 }
 @media all and (max-width: 1335px){
     .advantages .advantages__list .advantages__list-advantage{
@@ -347,6 +320,11 @@ html {
     .form .form__form{
         width: 100%;
         padding: 0 10%;
+    }
+}
+@media all and (max-width: 900px){
+    .form .form__form .form__label-digit{
+        display: none;
     }
 }
 @media all and (max-width: 550px){

@@ -15,7 +15,7 @@
             <!--<a class="header__profile-href">заполнить анкету</a>-->
             <a class="header__profile-href buttons__button-cover learn-more">
                 <div class="circle">
-                    <span class="icon arrow"></span>
+                    <span class="icon arrow">&#10010;</span>
                 </div>
                 <p class="button-text">заполнить анкету</p>
             </a>
@@ -76,23 +76,32 @@
             <div class="form">
                 <h2 class="form__caption">Теперь расскажите о себе</h2>
                 <form action="#" id="form" class="form__form">  
-                   <!-- <span class="form__label-digit">1</span> -->
-                    <label class="form__label">Фамилия и имя</label>
-                    <input type="text" placeholder="Сидоров Александр" class="form__input"/>
-                  <!--   <span class="form__label-digit">2</span> -->
-                    <label class="form__label">Электронная почта</label>
-                    <input type="text" placeholder="Sidorov@yandex.ru" class="form__input"/>
-                   <!--  <span class="form__label-digit">3</span> -->
-                    <label class="form__label">Телефон</label>
-                    <input type="tel" placeholder="+7 (999)-328-14-20" class="form__input"/>
-                  <!--   <span class="form__label-digit">4</span> -->
-                    <label class="form__label">Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?</label>
-                    <input type="text" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" class="form__input"/>
-                    <button type="submit" class="form__button">отправить</button>
+                    <div class="form__block">
+                        <span class="form__label-digit">1</span>
+                        <label class="form__label">Фамилия и имя</label>           
+                    </div>
+                    <input type="text" placeholder="Сидоров Александр" class="form__input" id="fio" required/>   
+                    <div class="form__block">
+                        <span class="form__label-digit">2</span>
+                        <label class="form__label">Электронная почта</label>           
+                    </div>
+                    <input type="email" placeholder="Sidorov@yandex.ru" class="form__input" id="email" required/>
+                    <div class="form__block">
+                        <span class="form__label-digit">3</span>
+                        <label class="form__label" >Телефон</label>           
+                    </div>
+                    <input type="tel" placeholder="+7 (999)-328-14-20" class="form__input" id="phone" required maxlength="11" minlength="11"/>
+                    <div class="form__block">
+                        <span class="form__label-digit">4</span>
+                        <label class="form__label">Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?</label>           
+                    </div>
+                    <input type="text" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" class="form__input" id="comment"/>
+                    <div class="form__error" id="form_error"></div>
+                    <button type="submit" class="form__button" id="submit_button" disabled>отправить</button>
                 </form>
             </div>
         </main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
