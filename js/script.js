@@ -35,7 +35,7 @@ $(document).ready(function(){
     );
 
    $('#href_profile').on('click',function(){
-       if(navigator.userAgent.search("MSIE") >= 0 || navigator.userAgent.search("Safari") >= 0 || navigator.userAgent.search("Edge") >= 0){
+       if(navigator.userAgent.search("MSIE") >= 0  || navigator.userAgent.search("Edge") >= 0){
            window.scrollTo(0,scrollHeight-$('#form_block').outerHeight());
        }
        else{
