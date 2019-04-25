@@ -5,7 +5,7 @@ $(document).ready(function(){
     var tel = $('#phone');
     var email = $('#email');
 	$(form).on('change keyup', function (e) {
-		if (name.val() != '' && !(tel.val().replace(/\D/g,'').length<11) && email.val()!='') {
+		if (name.val() != '' && !(tel.val().replace(/\D/g,'').length<10) && email.val()!='') {
 			button.prop('disabled', false);
 		}
 		else {
